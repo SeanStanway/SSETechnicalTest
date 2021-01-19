@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
+using Unity.Microsoft.DependencyInjection;
 
 namespace ProductApi
 {
@@ -20,16 +21,10 @@ namespace ProductApi
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .UseSerilog()
+                .UseUnityServiceProvider()
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-
-        //public IUnityContainer UnitySetup()
-        //{
-        //    UnityContainer container = new UnityContainer();
-        //    container
-        //    container.RegisterType<IProductsSql>(return new ProductsSql().SetupSql(new SqlConnection()));
-        //}
     }
 }

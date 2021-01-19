@@ -21,12 +21,14 @@ namespace ProductApi
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
-            //ProductsSql = new ProductsSql(new SqlConnection(configuration.GetConnectionString("mmtStore")), Log.Logger);
         }
 
         public IConfiguration Configuration { get; }
-        //public IProductsSql ProductsSql { get; }
+
+        public void ConfigureContainer(IUnityContainer container)
+        {
+            //container.RegisterSingleton<IUserRepository, UserRepository>();
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
