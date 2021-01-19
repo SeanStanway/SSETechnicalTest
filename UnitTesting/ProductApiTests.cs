@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using ProductApi.Controllers;
 using Microsoft.Extensions.Configuration;
-
+using SqlLibrary;
 
 namespace UnitTesting
 {
@@ -12,14 +12,16 @@ namespace UnitTesting
     public class ProductApiTests
     {
         private Mock<ILogger<ProductsController>> _logger;
+        private Mock<IProductsSql> _sql;
         private ProductsController _controller;
 
         [TestInitialize]
         public void Initialise()
         {
             _logger = new Mock<ILogger<ProductsController>>();
-            var configuration = new Mock<IConfiguration>();
-            _controller = new ProductsController(_logger.Object, configuration.Object);
+            var mockConfiguration = new Mock<IConfiguration>();
+            mockConfiguration.Setup(a => a.GetConnectionString("test")).Returns("test");
+            _controller = new ProductsController(_logger.Object, mockConfiguration.Object);
         }
 
         [TestMethod]
@@ -52,7 +54,7 @@ namespace UnitTesting
             //Arrange
 
             //Act
-            var result = _controller.GetProductsByCategory("home");
+            var result = _controller.GetProductsByCategoryName("home");
 
             //Assert
             Assert.IsInstanceOfType(result, typeof(OkObjectResult));
@@ -64,7 +66,19 @@ namespace UnitTesting
             //Arrange
 
             //Act
-            var result = _controller.GetProductsByCategory("garden");
+            var result = _controller.GetProductsByCategoryName("garden");
+
+            //Assert
+            Assert.IsInstanceOfType(result, typeof(OkObjectResult));
+        }
+
+        [TestMethod]
+        public void GetProductsByCategory_UsingWhiteSpace_Returns_Succcess()
+        {
+            //Arrange
+
+            //Act
+            var result = _controller.GetProductsByCategoryName("   ElECTRonics    ");
 
             //Assert
             Assert.IsInstanceOfType(result, typeof(OkObjectResult));
@@ -76,7 +90,7 @@ namespace UnitTesting
             //Arrange
 
             //Act
-            var result = _controller.GetProductsByCategory("invalid");
+            var result = _controller.GetProductsByCategoryName("invalid");
 
             //Assert
             Assert.IsInstanceOfType(result, typeof(BadRequestObjectResult));
