@@ -1,0 +1,7 @@
+2021-01-19 19:22:11.636 +00:00 [INF] Starting web api
+2021-01-19 19:22:12.421 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-19 19:22:12.423 +00:00 [INF] Hosting environment: Development
+2021-01-19 19:22:12.424 +00:00 [INF] Content root path: C:\Users\Sean\Source\Repos\SSETechnicalTest\ProductApi
+2021-01-19 19:22:12.434 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44361/api/products/featuredproducts  
+2021-01-19 19:22:12.468 +00:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi)'
+2021-01-19 19:22:12.504 +00:00 [INF] Route matched with {action = "GetFeaturedProducts", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFeaturedProducts() on controller ProductApi.Controllers.ProductsController (ProductApi).

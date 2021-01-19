@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using ProductApi.Models;
+using SqlLibrary;
+using System.Data.SqlClient;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
 
 namespace ProductApi.Controllers
 {
@@ -42,17 +43,22 @@ namespace ProductApi.Controllers
         };
 
         private readonly ILogger<ProductsController> _logger;
+        private ProductsSql _sql;
 
-        public ProductsController(ILogger<ProductsController> logger)
+        public ProductsController(ILogger<ProductsController> logger, IConfiguration configuration)
         {
             _logger = logger;
+            var sqlConnection = new SqlConnection(configuration.GetConnectionString("mmtStore"));
+            _sql = new ProductsSql(sqlConnection, _logger);
         }
 
         [HttpGet]
         [Route("FeaturedProducts")]
         public IActionResult GetFeaturedProducts()
         {
-            return Ok(initialProducts);
+            var result = _sql.GetFeaturedProducts();
+
+            return Ok(result);
         }
 
         [HttpGet]

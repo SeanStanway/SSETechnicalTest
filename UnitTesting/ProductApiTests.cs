@@ -2,9 +2,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using System.Collections.Generic;
 using ProductApi.Controllers;
-using ProductApi.Models;
+using Microsoft.Extensions.Configuration;
 
 
 namespace UnitTesting
@@ -19,7 +18,8 @@ namespace UnitTesting
         public void Initialise()
         {
             _logger = new Mock<ILogger<ProductsController>>();
-            _controller = new ProductsController(_logger.Object);
+            var configuration = new Mock<IConfiguration>();
+            _controller = new ProductsController(_logger.Object, configuration.Object);
         }
 
         [TestMethod]
