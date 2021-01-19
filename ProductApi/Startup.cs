@@ -6,10 +6,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Serilog;
+using SqlLibrary;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
+using Unity;
 
 namespace ProductApi
 {
@@ -18,9 +22,11 @@ namespace ProductApi
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            //ProductsSql = new ProductsSql(new SqlConnection(configuration.GetConnectionString("mmtStore")), Log.Logger);
         }
 
         public IConfiguration Configuration { get; }
+        //public IProductsSql ProductsSql { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)

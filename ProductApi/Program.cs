@@ -24,5 +24,12 @@ namespace ProductApi
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+        //public IUnityContainer UnitySetup()
+        //{
+        //    UnityContainer container = new UnityContainer();
+        //    container
+        //    container.RegisterType<IProductsSql>(return new ProductsSql().SetupSql(new SqlConnection()));
+        //}
     }
 }

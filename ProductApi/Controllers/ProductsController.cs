@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using ProductApi.Models;
 using SqlLibrary;
-using System.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
+using System.Data.SqlClient;
+using System.Collections.Generic;
 
 namespace ProductApi.Controllers
 {
@@ -12,44 +11,14 @@ namespace ProductApi.Controllers
     [Route("Api/Products")]
     public class ProductsController : ControllerBase
     {
-        private static readonly List<Product> initialProducts = new List<Product>()
-        {
-            new Product()
-            {
-                SKU = 1,
-                Name = "test",
-                Description = "new test",
-                Price = 9.99
-            }
-        };
-
-        private static readonly List<Category> initialCategories = new List<Category>()
-        {
-            new Category()
-            {
-                Name = "category1"
-            }
-        };
-
-        private static readonly List<Product> initialProductByCategory = new List<Product>()
-        {
-            new Product()
-            {
-                SKU = 2,
-                Name = "test2",
-                Description = "other test",
-                Price = 5.99
-            }
-        };
-
         private readonly ILogger<ProductsController> _logger;
-        private ProductsSql _sql;
+        private IProductsSql _sql;
+        private readonly List<string> _acceptedCategories = new List<string>() { "home", "garden", "electronics", "fitness", "toys" };
 
         public ProductsController(ILogger<ProductsController> logger, IConfiguration configuration)
         {
             _logger = logger;
-            var sqlConnection = new SqlConnection(configuration.GetConnectionString("mmtStore"));
-            _sql = new ProductsSql(sqlConnection, _logger);
+            _sql = new ProductsSql(new SqlConnection(configuration.GetConnectionString("mmtStore")), _logger);
         }
 
         [HttpGet]
@@ -65,22 +34,25 @@ namespace ProductApi.Controllers
         [Route("AvailableCategories")]
         public IActionResult GetAvailableCategories()
         {
-            return Ok(initialCategories);
+            var result = _sql.GetAvailableCategories();
+
+            return Ok(result);
         }
 
         [HttpGet]
-        [Route("ProductsByCategory/{category}")]
-        public IActionResult GetProductsByCategory(string category)
+        [Route("ProductsByCategory/{categoryName}")]
+        public IActionResult GetProductsByCategoryName(string categoryName)
         {
-            switch (category.ToLower())
+            var formattedCategory = categoryName.Trim().ToLower();
+
+            if (!_acceptedCategories.Contains(formattedCategory))
             {
-                case "home":
-                    return Ok(initialProducts);
-                case "garden":
-                    return Ok(initialProductByCategory);
-                default:
-                    return BadRequest("Invalid category");
+                return BadRequest("Invalid category");
             }
+
+            var result = _sql.GetProductsByCategoryName(formattedCategory);
+
+            return Ok(result);
         }
     }
 }

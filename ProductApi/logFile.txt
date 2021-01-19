@@ -5,3 +5,149 @@
 2021-01-19 19:22:12.434 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44361/api/products/featuredproducts  
 2021-01-19 19:22:12.468 +00:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi)'
 2021-01-19 19:22:12.504 +00:00 [INF] Route matched with {action = "GetFeaturedProducts", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFeaturedProducts() on controller ProductApi.Controllers.ProductsController (ProductApi).
+2021-01-19 19:32:29.851 +00:00 [INF] Starting web api
+2021-01-19 19:32:30.542 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-19 19:32:30.544 +00:00 [INF] Hosting environment: Development
+2021-01-19 19:32:30.545 +00:00 [INF] Content root path: C:\Users\Sean\Source\Repos\SSETechnicalTest\ProductApi
+2021-01-19 19:32:30.556 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44361/api/products/featuredproducts  
+2021-01-19 19:32:30.588 +00:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi)'
+2021-01-19 19:32:30.626 +00:00 [INF] Route matched with {action = "GetFeaturedProducts", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFeaturedProducts() on controller ProductApi.Controllers.ProductsController (ProductApi).
+2021-01-19 19:32:30.632 +00:00 [INF] Executed action ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi) in 2.7901ms
+2021-01-19 19:32:30.634 +00:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi)'
+2021-01-19 19:32:30.636 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'System.Data.IDbConnection' while attempting to activate 'ProductApi.Controllers.ProductsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-19 19:32:30.713 +00:00 [INF] Request finished in 160.4349ms 500 text/plain
+2021-01-19 20:08:59.568 +00:00 [INF] Starting web api
+2021-01-19 20:09:00.301 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-19 20:09:00.303 +00:00 [INF] Hosting environment: Development
+2021-01-19 20:09:00.304 +00:00 [INF] Content root path: C:\Users\Sean\Source\Repos\SSETechnicalTest\ProductApi
+2021-01-19 20:09:00.314 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44361/api/products/featuredproducts  
+2021-01-19 20:09:00.344 +00:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi)'
+2021-01-19 20:09:00.375 +00:00 [INF] Route matched with {action = "GetFeaturedProducts", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFeaturedProducts() on controller ProductApi.Controllers.ProductsController (ProductApi).
+2021-01-19 20:09:00.380 +00:00 [INF] Executed action ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi) in 1.5449ms
+2021-01-19 20:09:00.382 +00:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi)'
+2021-01-19 20:09:00.384 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'SqlLibrary.IProductsSql' while attempting to activate 'ProductApi.Controllers.ProductsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-19 20:09:00.441 +00:00 [INF] Request finished in 129.0576ms 500 text/plain
+2021-01-19 20:17:17.475 +00:00 [INF] Starting web api
+2021-01-19 20:17:18.121 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-19 20:17:18.123 +00:00 [INF] Hosting environment: Development
+2021-01-19 20:17:18.124 +00:00 [INF] Content root path: C:\Users\Sean\Source\Repos\SSETechnicalTest\ProductApi
+2021-01-19 20:17:18.144 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44361/api/products/featuredproducts  
+2021-01-19 20:17:18.179 +00:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi)'
+2021-01-19 20:17:18.214 +00:00 [INF] Route matched with {action = "GetFeaturedProducts", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFeaturedProducts() on controller ProductApi.Controllers.ProductsController (ProductApi).
+2021-01-19 20:17:18.220 +00:00 [INF] Executed action ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi) in 1.698ms
+2021-01-19 20:17:18.222 +00:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi)'
+2021-01-19 20:17:18.224 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.ILogger' while attempting to activate 'ProductApi.Controllers.ProductsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-19 20:17:18.280 +00:00 [INF] Request finished in 139.0367ms 500 text/plain
+2021-01-19 20:21:36.949 +00:00 [INF] Starting web api
+2021-01-19 20:21:37.630 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-19 20:21:37.632 +00:00 [INF] Hosting environment: Development
+2021-01-19 20:21:37.633 +00:00 [INF] Content root path: C:\Users\Sean\Source\Repos\SSETechnicalTest\ProductApi
+2021-01-19 20:21:37.643 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44361/api/products/featuredproducts  
+2021-01-19 20:21:37.671 +00:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi)'
+2021-01-19 20:21:37.705 +00:00 [INF] Route matched with {action = "GetFeaturedProducts", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFeaturedProducts() on controller ProductApi.Controllers.ProductsController (ProductApi).
+2021-01-19 20:21:52.183 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SqlLibrary.Models.Product, SqlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-01-19 20:21:52.215 +00:00 [INF] Executed action ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi) in 14505.1961ms
+2021-01-19 20:21:52.216 +00:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi)'
+2021-01-19 20:21:52.219 +00:00 [INF] Request finished in 14576.9789ms 200 application/json; charset=utf-8
+2021-01-19 20:40:23.060 +00:00 [INF] Starting web api
+2021-01-19 20:40:23.749 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-19 20:40:23.751 +00:00 [INF] Hosting environment: Development
+2021-01-19 20:40:23.752 +00:00 [INF] Content root path: C:\Users\Sean\Source\Repos\SSETechnicalTest\ProductApi
+2021-01-19 20:40:23.764 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44361/api/products/featuredproducts  
+2021-01-19 20:40:23.800 +00:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi)'
+2021-01-19 20:40:23.839 +00:00 [INF] Route matched with {action = "GetFeaturedProducts", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetFeaturedProducts() on controller ProductApi.Controllers.ProductsController (ProductApi).
+2021-01-19 20:40:26.716 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SqlLibrary.Models.Product, SqlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-01-19 20:40:26.746 +00:00 [INF] Executed action ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi) in 2902.3331ms
+2021-01-19 20:40:26.747 +00:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi)'
+2021-01-19 20:40:26.749 +00:00 [INF] Request finished in 2987.0003ms 200 application/json; charset=utf-8
+2021-01-19 20:40:32.058 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44361/api/products/availablecategories  
+2021-01-19 20:40:32.060 +00:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductsController.GetAvailableCategories (ProductApi)'
+2021-01-19 20:40:32.063 +00:00 [INF] Route matched with {action = "GetAvailableCategories", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAvailableCategories() on controller ProductApi.Controllers.ProductsController (ProductApi).
+2021-01-19 20:40:36.387 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SqlLibrary.Models.Category, SqlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-01-19 20:40:36.389 +00:00 [INF] Executed action ProductApi.Controllers.ProductsController.GetAvailableCategories (ProductApi) in 4325.9449ms
+2021-01-19 20:40:36.389 +00:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductsController.GetAvailableCategories (ProductApi)'
+2021-01-19 20:40:36.389 +00:00 [INF] Request finished in 4331.837ms 200 application/json; charset=utf-8
+2021-01-19 20:40:46.046 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44361/api/products/productsbycategory/home  
+2021-01-19 20:40:46.047 +00:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi)'
+2021-01-19 20:40:46.059 +00:00 [INF] Route matched with {action = "GetProductsByCategoryName", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductsByCategoryName(System.String) on controller ProductApi.Controllers.ProductsController (ProductApi).
+2021-01-19 20:40:52.451 +00:00 [ERR] Failed to read from database
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'ProductsByCategoryName' expects parameter '@categoryName', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at SqlLibrary.ProductsSql.GetDataFromDatabase(SqlCommand command) in C:\Users\Sean\Source\Repos\SSETechnicalTest\SqlLibrary\ProductsSql.cs:line 82
+ClientConnectionId:07b19e42-7dd7-41ac-9288-e80ab388836b
+Error Number:201,State:4,Class:16
+2021-01-19 20:45:19.115 +00:00 [INF] Starting web api
+2021-01-19 20:45:19.946 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-19 20:45:19.948 +00:00 [INF] Hosting environment: Development
+2021-01-19 20:45:19.949 +00:00 [INF] Content root path: C:\Users\Sean\Source\Repos\SSETechnicalTest\ProductApi
+2021-01-19 20:45:19.960 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44361/api/products/productsbycategory/home  
+2021-01-19 20:45:19.993 +00:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi)'
+2021-01-19 20:45:20.034 +00:00 [INF] Route matched with {action = "GetProductsByCategoryName", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductsByCategoryName(System.String) on controller ProductApi.Controllers.ProductsController (ProductApi).
+2021-01-19 20:45:24.533 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SqlLibrary.Models.Product, SqlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-01-19 20:45:24.557 +00:00 [INF] Executed action ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi) in 4519.2309ms
+2021-01-19 20:45:24.558 +00:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi)'
+2021-01-19 20:45:24.560 +00:00 [INF] Request finished in 4602.4801ms 200 application/json; charset=utf-8
+2021-01-19 20:45:41.951 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44361/api/products/productsbycategory/invalid  
+2021-01-19 20:45:41.952 +00:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi)'
+2021-01-19 20:45:41.953 +00:00 [INF] Route matched with {action = "GetProductsByCategoryName", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductsByCategoryName(System.String) on controller ProductApi.Controllers.ProductsController (ProductApi).
+2021-01-19 20:45:45.375 +00:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-19 20:45:45.378 +00:00 [INF] Executed action ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi) in 3425.3014ms
+2021-01-19 20:45:45.378 +00:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi)'
+2021-01-19 20:45:45.379 +00:00 [INF] Request finished in 3428.8142ms 400 text/plain; charset=utf-8
+2021-01-19 20:46:04.982 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44361/api/products/productsbycategory/ElEcTroNICs  
+2021-01-19 20:46:04.983 +00:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi)'
+2021-01-19 20:46:04.983 +00:00 [INF] Route matched with {action = "GetProductsByCategoryName", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductsByCategoryName(System.String) on controller ProductApi.Controllers.ProductsController (ProductApi).
+2021-01-19 20:46:09.595 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SqlLibrary.Models.Product, SqlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-01-19 20:46:09.597 +00:00 [INF] Executed action ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi) in 4612.7095ms
+2021-01-19 20:46:09.599 +00:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi)'
+2021-01-19 20:46:09.599 +00:00 [INF] Request finished in 4617.2434ms 200 application/json; charset=utf-8
