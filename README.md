@@ -6,7 +6,7 @@ Technical Test for MMT
 2. ProductApi - C# ASP NET Core API retrieving data from SQL Library
 3. SqlLibrary - C# NET Core library to bridge gap between API and SQL database, running stored procedures to retrieve data
 4. UnitTesting - C# NET Core unit test library
-5. Solution Items - Contains SQL files for creating database tables and stored procedure
+5. SQL Files - Contains SQL files for creating database tables and stored procedure
 
 ### SSETechnicalTest
 A C# NET Core console application. Has simple console interface for user to read and then perform desired actions.
@@ -36,7 +36,7 @@ C# Net Core Unit Test project. Testing based solely around the SSETechnicalTest 
 and MSTest to allow testing of class that performs main functionality. No testing around API due to slip ups with 
 Unity configuration in NET Core. 
 
-### Solution Items
+### SQL Files
 SQL files used for creating the database schemas and stored procedures. Files contain the following:
 
 ##### CreateTables_schema.sql 
