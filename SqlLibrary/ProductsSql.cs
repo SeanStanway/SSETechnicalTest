@@ -119,7 +119,7 @@ namespace SqlLibrary
         {
             return new Product()
             {
-                SKU = reader["SKU"].ToString(),
+                SKU = (int)reader["SKU"],
                 CategoryId = (int)reader["CategoryId"],
                 Name = reader["Name"].ToString(),
                 Description = reader["Description"].ToString(),
