@@ -9,7 +9,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductApi", "ProductApi\Pr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{ED777BA9-4BE1-47CA-BDD6-3474FA210AD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlLibrary", "SqlLibrary\SqlLibrary.csproj", "{02AAE14E-BAA5-436A-A78A-F3BAF73D4B9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlLibrary", "SqlLibrary\SqlLibrary.csproj", "{02AAE14E-BAA5-436A-A78A-F3BAF73D4B9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL Files", "SQL Files", "{8ED2C35B-2056-483A-833B-E6AA4CB586B8}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\Jobs\MMT Digital\CreateTables_schema.sql = ..\..\..\Downloads\Jobs\MMT Digital\CreateTables_schema.sql
+		..\..\..\Downloads\Jobs\MMT Digital\GetAvailableCategories_procedure.sql = ..\..\..\Downloads\Jobs\MMT Digital\GetAvailableCategories_procedure.sql
+		..\..\..\Downloads\Jobs\MMT Digital\GetFeaturedProducts_procedure.sql = ..\..\..\Downloads\Jobs\MMT Digital\GetFeaturedProducts_procedure.sql
+		..\..\..\Downloads\Jobs\MMT Digital\GetProductsByCategory_procedure.sql = ..\..\..\Downloads\Jobs\MMT Digital\GetProductsByCategory_procedure.sql
+		..\..\..\Downloads\Jobs\MMT Digital\PopulateCategories_procedure.sql = ..\..\..\Downloads\Jobs\MMT Digital\PopulateCategories_procedure.sql
+		..\..\..\Downloads\Jobs\MMT Digital\PopulateProducts_procedure.sql = ..\..\..\Downloads\Jobs\MMT Digital\PopulateProducts_procedure.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
