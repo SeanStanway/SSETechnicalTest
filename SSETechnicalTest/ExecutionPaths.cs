@@ -26,7 +26,7 @@ namespace SSETechnicalTest
             {
                 Console.WriteLine("Product list retrieved, writing to text file");
 
-                var filepath = $"featureProducts-{DateTime.Now.ToLongTimeString().Replace(":", "")}.txt";
+                var filepath = $"featuredProducts-{DateTime.Now.ToLongTimeString().Replace(":", "")}.txt";
 
                 File.WriteAllText(filepath, JsonSerializer.Serialize(apiReturn));
 

@@ -1,6 +1,0 @@
-﻿namespace UnitTesting
-{
-    class SqlLibraryTests
-    {
-    }
-}
