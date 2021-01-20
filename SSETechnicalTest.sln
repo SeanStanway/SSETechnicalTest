@@ -11,14 +11,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTesting", "UnitTesting\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlLibrary", "SqlLibrary\SqlLibrary.csproj", "{02AAE14E-BAA5-436A-A78A-F3BAF73D4B9A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL Files", "SQL Files", "{8ED2C35B-2056-483A-833B-E6AA4CB586B8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A9E936FA-E05C-4E1E-9310-17E6CE9832DE}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\Downloads\Jobs\MMT Digital\CreateTables_schema.sql = ..\..\..\Downloads\Jobs\MMT Digital\CreateTables_schema.sql
-		..\..\..\Downloads\Jobs\MMT Digital\GetAvailableCategories_procedure.sql = ..\..\..\Downloads\Jobs\MMT Digital\GetAvailableCategories_procedure.sql
-		..\..\..\Downloads\Jobs\MMT Digital\GetFeaturedProducts_procedure.sql = ..\..\..\Downloads\Jobs\MMT Digital\GetFeaturedProducts_procedure.sql
-		..\..\..\Downloads\Jobs\MMT Digital\GetProductsByCategory_procedure.sql = ..\..\..\Downloads\Jobs\MMT Digital\GetProductsByCategory_procedure.sql
-		..\..\..\Downloads\Jobs\MMT Digital\PopulateCategories_procedure.sql = ..\..\..\Downloads\Jobs\MMT Digital\PopulateCategories_procedure.sql
-		..\..\..\Downloads\Jobs\MMT Digital\PopulateProducts_procedure.sql = ..\..\..\Downloads\Jobs\MMT Digital\PopulateProducts_procedure.sql
+		SQL Files\CreateTables_schema.sql = SQL Files\CreateTables_schema.sql
+		SQL Files\GetAvailableCategories_procedure.sql = SQL Files\GetAvailableCategories_procedure.sql
+		SQL Files\GetFeaturedProducts_procedure.sql = SQL Files\GetFeaturedProducts_procedure.sql
+		SQL Files\GetProductsByCategory_procedure.sql = SQL Files\GetProductsByCategory_procedure.sql
+		SQL Files\PopulateCategories_procedure.sql = SQL Files\PopulateCategories_procedure.sql
+		SQL Files\PopulateProducts_procedure.sql = SQL Files\PopulateProducts_procedure.sql
 	EndProjectSection
 EndProject
 Global
