@@ -299,3 +299,32 @@ Error Number:201,State:4,Class:16
 2021-01-19 23:54:47.850 +00:00 [INF] Executed action ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi) in 214.3458ms
 2021-01-19 23:54:47.851 +00:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductsController.GetFeaturedProducts (ProductApi)'
 2021-01-19 23:54:47.853 +00:00 [INF] Request finished in 305.0445ms 200 application/json; charset=utf-8
+2021-01-20 10:18:53.571 +00:00 [INF] Starting web api
+2021-01-20 10:18:54.645 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-20 10:18:54.658 +00:00 [INF] Hosting environment: Development
+2021-01-20 10:18:54.661 +00:00 [INF] Content root path: C:\Users\Sean\Source\Repos\SSETechnicalTest\ProductApi
+2021-01-20 10:18:54.677 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44361/api/products  
+2021-01-20 10:18:54.741 +00:00 [INF] Request finished in 65.9347ms 404 
+2021-01-20 10:19:11.155 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44361/Api/Products/ProductsByCategory/home  
+2021-01-20 10:19:11.177 +00:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi)'
+2021-01-20 10:19:11.215 +00:00 [INF] Route matched with {action = "GetProductsByCategoryName", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductsByCategoryName(System.String) on controller ProductApi.Controllers.ProductsController (ProductApi).
+2021-01-20 10:19:11.486 +00:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-01-20 10:19:11.496 +00:00 [INF] Executed action ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi) in 278.1677ms
+2021-01-20 10:19:11.497 +00:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi)'
+2021-01-20 10:19:11.499 +00:00 [INF] Request finished in 344.3108ms 400 text/plain; charset=utf-8
+2021-01-20 10:19:29.413 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44361/Api/Products/ProductsByCategory/home  
+2021-01-20 10:19:29.414 +00:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi)'
+2021-01-20 10:19:29.415 +00:00 [INF] Route matched with {action = "GetProductsByCategoryName", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductsByCategoryName(System.String) on controller ProductApi.Controllers.ProductsController (ProductApi).
+2021-01-20 10:19:54.770 +00:00 [INF] Starting web api
+2021-01-20 10:19:55.530 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-20 10:19:55.534 +00:00 [INF] Hosting environment: Development
+2021-01-20 10:19:55.535 +00:00 [INF] Content root path: C:\Users\Sean\Source\Repos\SSETechnicalTest\ProductApi
+2021-01-20 10:19:55.546 +00:00 [INF] Request starting HTTP/2.0 GET https://localhost:44361/api/products  
+2021-01-20 10:19:55.581 +00:00 [INF] Request finished in 36.2294ms 404 
+2021-01-20 10:20:07.329 +00:00 [INF] Request starting HTTP/1.1 GET https://localhost:44361/Api/Products/ProductsByCategory/home  
+2021-01-20 10:20:07.352 +00:00 [INF] Executing endpoint 'ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi)'
+2021-01-20 10:20:07.389 +00:00 [INF] Route matched with {action = "GetProductsByCategoryName", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProductsByCategoryName(System.String) on controller ProductApi.Controllers.ProductsController (ProductApi).
+2021-01-20 10:20:11.345 +00:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SqlLibrary.Models.Product, SqlLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-01-20 10:20:11.364 +00:00 [INF] Executed action ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi) in 3971.1955ms
+2021-01-20 10:20:11.365 +00:00 [INF] Executed endpoint 'ProductApi.Controllers.ProductsController.GetProductsByCategoryName (ProductApi)'
+2021-01-20 10:20:11.366 +00:00 [INF] Request finished in 4037.0541ms 200 application/json; charset=utf-8

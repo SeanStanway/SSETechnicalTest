@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 using System.Collections.Generic;
+using SqlLibrary.Models;
 
 namespace ProductApi.Controllers
 {
@@ -13,7 +14,6 @@ namespace ProductApi.Controllers
     {
         private readonly ILogger<ProductsController> _logger;
         private IProductsSql _sql;
-        private readonly List<string> _acceptedCategories = new List<string>() { "home", "garden", "electronics", "fitness", "toys" };
 
         public ProductsController(ILogger<ProductsController> logger, IConfiguration configuration)
         {
@@ -45,7 +45,9 @@ namespace ProductApi.Controllers
         {
             var formattedCategory = categoryName.Trim().ToLower();
 
-            if (!_acceptedCategories.Contains(formattedCategory))
+            var availableCategories = ParseAvailableCategoryNames(_sql.GetAvailableCategories());
+
+            if (!availableCategories.Contains(formattedCategory))
             {
                 return BadRequest("Invalid category");
             }
@@ -53,6 +55,18 @@ namespace ProductApi.Controllers
             var result = _sql.GetProductsByCategoryName(formattedCategory);
 
             return Ok(result);
+        }
+
+        private List<string> ParseAvailableCategoryNames(IEnumerable<Category> categories)
+        {
+            var list = new List<string>();
+
+            foreach (Category category in categories)
+            {
+                list.Add(category.Name.ToLower());
+            }
+
+            return list;
         }
     }
 }
